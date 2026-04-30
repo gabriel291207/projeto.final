@@ -1,142 +1,102 @@
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
+  font-family: Arial, sans-serif;
 
-  background-image: url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d");
+  background-image: url("./assets/bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
-  body::before {
-  content: "";
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.4);
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
+  background-attachment: fixed;
 }
 
-/* container principal */
 .app {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
   padding: 20px;
 }
 
-h1 {
-  color: #000000;
-  margin-bottom: 10px;
+nav a {
+  margin: 10px;
+  text-decoration: none;
+  color: #273c75;
+  font-weight: bold;
 }
 
-/* busca */
-.search {
-  width: 300px;
-  padding: 10px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  margin-bottom: 20px;
-}
-
-/* layout lado a lado */
 .container {
   display: flex;
-  gap: 30px;
-  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
 }
 
-/* card padrão */
 .card {
   background: white;
   padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
 }
 
-/* formulário */
 form {
-  width: 320px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-
-form input {
-  width: 100%;
-  height: 40px;
-  padding: 0 10px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-
-  form input:focus {
-  outline: none;
-  border: 1px solid #273c75;
-  box-shadow: 0 0 5px rgba(39, 60, 117, 0.3);
-}
-}
-
-form button {
-  height: 40px;
-  margin-top: 10px;
-  background-color: #273c75;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-form button:hover {
-  background-color: #40739e;
-}
-
-/* lista */
-.lista {
   width: 300px;
 }
 
-/* item */
-.item {
-  background: #f1f2f6;
+input {
   padding: 10px;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-.item button {
-  margin-right: 5px;
-  padding: 5px 8px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.item button:first-child {
-  background-color: #44bd32;
-  color: white;
-}
-
-.item button:last-child {
-  background-color: #e84118;
-  color: white;
-}
-
-.item {
-  transition: transform 0.2s;
-}
-
-.item:hover {
-  transform: scale(1.03);
 }
 
 button {
-  transition: 0.2s;
+  padding: 10px;
+  cursor: pointer;
 }
 
-button:hover {
-  transform: scale(1.05);
+.item {
+  margin: 10px 0;
+  padding: 10px;
+  background: #eee;
 }
 
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+/* fundo geral do app */
+.app-bg {
+  background: url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d") no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+/* camada escura por cima */
+.overlay {
+  min-height: 100vh;
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* 👈 isso evita bug */
+  padding: 20px;
+}
+
+/* deixa texto visível */
+h1, nav {
+  color: white;
+}
+
+.search {
+  width: 300px;
+  max-width: 90%;
+  margin: 20px auto;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
