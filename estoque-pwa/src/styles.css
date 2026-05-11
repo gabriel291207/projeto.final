@@ -1,0 +1,194 @@
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Fundo geral */
+.app-bg {
+  background: url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d")
+    no-repeat center center;
+
+  background-size: cover;
+  min-height: 100vh;
+}
+
+/* Camada escura */
+.overlay {
+  min-height: 100vh;
+  width: 100%;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Título */
+h1 {
+  color: white;
+  margin-bottom: 10px;
+  font-size: 50px;
+  text-align: center;
+}
+
+/* Navegação */
+nav {
+  margin-bottom: 30px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 12px;
+  font-size: 18px;
+
+  transition: 0.2s;
+}
+
+nav a:hover {
+  color: #60a5fa;
+}
+
+/* Busca */
+.search {
+  width: 350px;
+  max-width: 90%;
+
+  padding: 12px;
+
+  border: none;
+  border-radius: 8px;
+
+  margin-bottom: 30px;
+
+  font-size: 16px;
+
+  outline: none;
+}
+
+/* Container principal */
+.container {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Cards */
+.card {
+  background: rgba(255, 255, 255, 0.96);
+
+  padding: 30px;
+
+  border-radius: 15px;
+
+  width: 450px;
+  max-width: 95%;
+
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Formulário */
+form {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Inputs */
+input {
+  padding: 12px;
+
+  border-radius: 8px;
+  border: 1px solid #dcdde1;
+
+  font-size: 15px;
+
+  outline: none;
+}
+
+input:focus {
+  border: 1px solid #2563eb;
+}
+
+/* Botões */
+button {
+  background: #2563eb;
+  color: white;
+
+  padding: 12px;
+
+  border: none;
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-size: 15px;
+  font-weight: bold;
+
+  transition: 0.2s;
+
+  margin-right: 10px;
+}
+
+button:hover {
+  background: #1d4ed8;
+  transform: scale(1.02);
+}
+
+/* Lista de produtos */
+.item {
+  background: #f1f2f6;
+
+  padding: 20px;
+
+  border-radius: 12px;
+
+  margin-top: 15px;
+
+  width: 100%;
+
+  box-sizing: border-box;
+
+  transition: 0.2s;
+}
+
+.item:hover {
+  transform: scale(1.02);
+}
+
+/* Texto da quantidade */
+.item p {
+  font-size: 16px;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+
+  h1 {
+    font-size: 35px;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .search {
+    width: 90%;
+  }
+}
